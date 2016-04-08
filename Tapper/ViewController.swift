@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        howManyTapsTxt.keyboardType = UIKeyboardType.NumberPad
         //Looks for single or multiple taps.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
@@ -35,6 +35,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tapBtn: UIButton!
     @IBOutlet weak var tapsLabel: UILabel!
+    
     
     @IBAction func onCoinTapped(sender: UIButton!) {
             currentTaps++
