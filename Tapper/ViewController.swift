@@ -29,6 +29,7 @@ class ViewController: UIViewController {
     
     
     //Outlets:
+    @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var logoImg: UIImageView!
     @IBOutlet weak var howManyTapsTxt: UITextField!
     @IBOutlet weak var playBtn: UIButton!
@@ -47,6 +48,9 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func onBackButtonPressed(sender: UIButton) {
+        restartGame()
+    }
     @IBAction func onPlayButtonPressed(sender: UIButton!) {
         
         if howManyTapsTxt.text != nil && howManyTapsTxt.text != "" {
@@ -56,6 +60,7 @@ class ViewController: UIViewController {
             
             tapBtn.hidden = false
             tapsLabel.hidden = false
+            backButton.hidden = false
 
             maxTaps = Int(howManyTapsTxt.text!)!
             currentTaps = 0
@@ -82,6 +87,7 @@ class ViewController: UIViewController {
         
         tapBtn.hidden = true
         tapsLabel.hidden = true
+        backButton.hidden = true
     }
     
     func updateTapsLabel() {

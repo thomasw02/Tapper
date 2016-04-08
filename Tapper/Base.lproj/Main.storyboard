@@ -62,12 +62,21 @@
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="100 Taps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wHj-wg-HHm" userLabel="Label">
                                 <rect key="frame" x="174" y="321" width="253" height="85"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="60"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x53-lu-US5">
+                                <rect key="frame" x="174" y="396" width="253" height="90"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="49"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="onBackButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tvw-SH-Lns"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="DXm-7i-LMl" firstAttribute="centerX" secondItem="x53-lu-US5" secondAttribute="centerX" id="2is-kX-Zfs"/>
                             <constraint firstItem="J52-E6-N63" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7FK-wM-vcD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="DXm-7i-LMl" secondAttribute="trailing" constant="50" id="AYw-DU-6n5"/>
                             <constraint firstItem="DXm-7i-LMl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="BWr-vS-BWM"/>
@@ -83,6 +92,7 @@
                             <constraint firstItem="fg1-zA-e67" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="40" id="d9e-Rg-pX0"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="J52-E6-N63" secondAttribute="bottom" id="dPB-La-RA4"/>
                             <constraint firstAttribute="trailing" secondItem="J52-E6-N63" secondAttribute="trailing" id="fDw-ZW-VZm"/>
+                            <constraint firstItem="DXm-7i-LMl" firstAttribute="centerY" secondItem="x53-lu-US5" secondAttribute="centerY" id="kBC-vE-pj7"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DXm-7i-LMl" secondAttribute="bottom" constant="100" id="lT8-8s-XPa"/>
                             <constraint firstItem="L4b-bf-XD6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="14" id="mr4-cz-eDa"/>
                             <constraint firstItem="wHj-wg-HHm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="rr3-Ml-x1S"/>
@@ -90,6 +100,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="x53-lu-US5" id="heJ-Hw-upx"/>
                         <outlet property="howManyTapsTxt" destination="WgG-RX-w60" id="5xV-Kt-mLl"/>
                         <outlet property="logoImg" destination="fg1-zA-e67" id="HtK-UM-Q2Y"/>
                         <outlet property="playBtn" destination="DXm-7i-LMl" id="7rP-2y-pnO"/>
