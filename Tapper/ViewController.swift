@@ -39,7 +39,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func onCoinTapped(sender: UIButton!) {
-            currentTaps++
+            currentTaps += 1
             updateTapsLabel()
         
         if isGameOver() {
